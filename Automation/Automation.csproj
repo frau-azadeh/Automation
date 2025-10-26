@@ -9,4 +9,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Automation.CommenLayer\Automation.CommenLayer.csproj" />
+    <ProjectReference Include="..\Automation.DataModelLayer\Automation.DataModelLayer.csproj" />
+  </ItemGroup>
+
 </Project>
