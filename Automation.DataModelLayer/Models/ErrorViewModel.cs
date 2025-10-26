@@ -1,6 +1,6 @@
 using System;
 
-namespace Automation.Models
+namespace Automation.DataModelLayer.Models
 {
     public class ErrorViewModel
     {
