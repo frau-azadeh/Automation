@@ -54,6 +54,20 @@ namespace Automation
 
             app.UseMvc(routes =>
             {
+
+                //AdminArea
+                routes.MapAreaRoute(
+                    "AdminPanel",
+                    "AdminPanel",
+                    "AdminPanel/{controller=UserManager}/{action=Index}/{id?}"
+                    );
+                //UserArea
+                routes.MapRoute(
+                    "UserPanel",
+                    "UserPanel",
+                    "UserPanel/{controller=User}/{action=Index}/{id?}"
+                    );
+                //Default
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Account}/{action=Login}/{id?}");
