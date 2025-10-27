@@ -10,7 +10,28 @@
             <img src="~/publicimage/mainLogo.png" style="width:75px;" />
         </div>
         <div>
-
+            <span style="text-align:center; font-weight:bold">ورود به سیستم اتوماسیون</span>
         </div>
+        <hr style="height:1px; background-color:#032E15;width:100%" />
+        <div class="col-xs-12 col-md-12 alert" style="text-align:center; background-color:#032E15;color:white; ">
+            <span>اتوماسیون اداری تحت وب</span>
+        </div>
+        <form asp-controller="Account" asp-action="Login" method="post">
+            <div class="form-group col-xs-12 col-md-12">
+                <div class="input-group">
+                    <input type="text" class="form-control" autocomplete="off" style="text-align:right; font-weight:bold; border-radius:5px 0 0 5px "
+                           placeholder="نام کاربری" />
+                </div>
+                <span class="text-danger" style="font-weight:bold"></span>
+            </div>
+            <div class="form-group col-xs-12 col-md-12">
+                <div class="input-group">
+                    <input type="password" class="form-control" autocomplete="off" style="text-align:right; font-weight:bold; border-radius:5px 0 0 5px "
+                           placeholder="پسورد" />
+                </div>
+                <span class="text-danger" style=" font-weight:bold"></span>
+            </div>
+        </form>
     </div>
+   
 </div>
