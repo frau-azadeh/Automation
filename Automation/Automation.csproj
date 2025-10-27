@@ -29,4 +29,13 @@
     <Folder Include="wwwroot\Panel\assets\js\plugins\buttons\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Areas\UserPanel\Views\User\_ViewImports.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Areas\UserPanel\Views\User\_ViewStart.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
 </Project>
