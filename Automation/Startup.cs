@@ -62,7 +62,7 @@ namespace Automation
                     "AdminPanel/{controller=UserManager}/{action=Index}/{id?}"
                     );
                 //UserArea
-                routes.MapRoute(
+                routes.MapAreaRoute(
                     "UserPanel",
                     "UserPanel",
                     "UserPanel/{controller=User}/{action=Index}/{id?}"
