@@ -30,8 +30,9 @@ namespace Automation
         {
             //DataBaseService
             services.AddDbContext<ApplicationDbContext>(option =>
-            option.UseSqlServer(Configuration.GetConnectionString("AutomationConnectionString"),
-            datamodel => datamodel.MigrationsAssembly("WebAutomationSystem.DataModelLayer")));
+        option.UseSqlServer(Configuration.GetConnectionString("AutomationConnectionString"),
+            datamodel => datamodel.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.GetName().Name)));
+
 
             //Identity Service
 
