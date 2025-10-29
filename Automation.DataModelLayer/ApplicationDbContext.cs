@@ -9,6 +9,8 @@ namespace Automation.DataModelLayer
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUsers,ApplicationRoles,string>
     {
+        private static DbContextOptions option;
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext>options) : base(option)
         {
 
