@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Automation.DataModelLayer;
+using Automation.DataModelLayer.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -24,6 +28,17 @@ namespace Automation
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //DataBaseService
+            services.AddDbContext<ApplicationDbContext>(option =>
+            option.UseSqlServer(Configuration.GetConnectionString("AutomationConnectionString"),
+            datamodel => datamodel.MigrationsAssembly("WebAutomationSystem.DataModelLayer")));
+
+            //Identity Service
+
+            services.AddIdentity<ApplicationUsers, ApplicationRoles>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
+               
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
