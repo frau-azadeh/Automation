@@ -3,5 +3,42 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>داشبورد ادمین</h2>
+<div class="content">
+    <div class="panel panel-heading" style="box-shadow:1px 1px 0 0 gray; ">
+        <span style="font-weight:bold">
+            <i class="glyphicon glyphicon-user" ></i>
+            لیست کاربران سامانه
+        </span>
+    </div>
+
+    <div style="margin-bottom:5px">
+        <a class="btn cusomGreen1" asp-controller="UserManager" asp-action="AddUser">
+            <i class="glyphicon glyphicon-plus"></i>
+            افزودن کاربر جدید
+        </a>
+    </div>
+    <div >
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover" style="border-radius:2px; box-shadow:3px 3px 1px gray;">
+                <thead>
+                    <tr>
+                        <td>ردیف</td>
+                        <td>نام</td>
+                        <td>نام خانوادگی</td>
+                        <td>شماره تماس</td>
+                        <td>کد پرسنلی</td>
+                        <td>تام کاربری</td>
+                        <td>تصویر</td>
+                        <td>امضا</td>
+                        <td>وضعیت</td>
+                        <td>عملیات</td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
