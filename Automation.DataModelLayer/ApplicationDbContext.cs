@@ -15,5 +15,19 @@ namespace Automation.DataModelLayer
         {
 
         }
+        //change name and field Table
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+            builder.Entity<ApplicationUsers>(entity =>
+            {
+                entity.ToTable(name: "Users_Tb1");
+                entity.Property(e => e.Id).HasColumnName("UserId");
+            });
+            builder.Entity<ApplicationRoles>(entity =>
+            {
+                entity.ToTable(name: "Roles_Tb1");
+            });
+        }
     }
 }

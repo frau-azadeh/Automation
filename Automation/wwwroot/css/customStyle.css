@@ -1,0 +1,10 @@
+﻿body {
+    font-family:'Vazir'!important
+}
+
+.cusomGreen1{
+    border: 1px solid gray;
+    border-radius:3px;
+    color:black !important;
+    background-color: #d0f7c9;
+}
